@@ -1,0 +1,18 @@
+<div class="container">
+  <h2 class="my-3 text-center">Welcome to Click & Control</h2>
+
+  <div class="d-flex justify-content-center">
+    <div class="text-center my-2 my-md-5 text">
+      <h5 *ngIf="!isLoggedIn">You need to <a [routerLink]="'/login'">login</a> to access the travellers list</h5>
+      <h5 *ngIf="isLoggedIn">Go to the <a [routerLink]="'/travellers'">travellers</a> list</h5>
+
+      <p>Enjoy your trip!</p>
+    </div>
+  </div>
+
+
+  <div class="d-flex justify-content-center">
+    <img src="assets/img/plane.png" alt="">
+  </div>
+
+</div>

@@ -1,0 +1,13 @@
+form{
+  width: 30%;
+}
+
+input, button{
+  width: 100%;
+}
+
+@media (max-width: 768px){
+  form{
+    width: 85%;
+  }
+}

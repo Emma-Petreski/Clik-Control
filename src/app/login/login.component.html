@@ -1,0 +1,47 @@
+<div class="container">
+  <h3 class="text-center my-2 my-md-5">Login</h3>
+
+  <div class="card d-flex">
+    <form [formGroup]="formLogin" (ngSubmit)="submit()" class="mt-2 mt-md-5 mx-auto">
+
+      <div class="">
+        <div>
+          <label for="id" class="d-block text-center">Id</label>
+          <input type="text"
+                 id="id"
+                 formControlName="id"
+                 required
+                 class="form-control"
+                 [ngClass]="{'is-invalid': formControls.id.errors?.required && submitted || (submitted && errorMsg), 'is-valid': formControls.id.valid && !(submitted || errorMsg)}">
+
+          <div *ngIf="submitted && formControls.id.errors" class="invalid-feedback d-flex justify-content-center">
+            <p *ngIf="formControls.id.errors.required" class="mb-0">Id is required</p>
+          </div>
+        </div>
+
+        <div class="my-2 my-md-5">
+          <label for="current-password" class="d-block text-center">Password</label>
+          <input type="password"
+                 autocomplete="on"
+                 id="current-password"
+                 formControlName="password"
+                 required
+                 class="form-control"
+                 [ngClass]="{'is-invalid': formControls.password.errors?.required && submitted || (submitted && errorMsg), 'is-valid': formControls.password.valid}">
+
+          <div *ngIf="submitted && formControls.password.errors" class="invalid-feedback d-flex justify-content-center">
+            <p *ngIf="formControls.password.errors.required" class="mb-0">Password is required</p>
+          </div>
+        </div>
+
+        <p *ngIf="errorMsg" class="alert alert-danger text-center">{{errorMsg}}</p>
+
+        <button type="submit" class="my-3 btn btn-primary">Submit</button>
+
+      </div>
+
+    </form>
+  </div>
+
+
+</div>

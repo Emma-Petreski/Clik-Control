@@ -1,0 +1,18 @@
+img{
+  width: 100%;
+}
+.text{
+  background-color: rgba(255,255,255,0.7);
+  position: absolute;
+  top: 30%;
+  padding: 2rem;
+  width: 30rem;
+}
+
+@media (max-width: 768px){
+  .text{
+    top: 20%;
+    padding: 0.5rem 0;
+    width: 15rem;
+  }
+}
